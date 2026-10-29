@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Practice page – Reframe</title>
+    <link rel="icon" href="media/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .app {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 16px;
+      }
+      .side button {
+        display: block;
+        width: 100%;
+        margin-bottom: 6px;
+        padding: 8px 10px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--text);
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
+      }
+      .side button[aria-pressed='true'] {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+        color: var(--accent-soft-text);
+      }
+      form {
+        display: grid;
+        gap: 10px;
+      }
+      label {
+        display: grid;
+        gap: 4px;
+        font-size: 14px;
+      }
+      input,
+      select {
+        padding: 8px 10px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--text);
+        font: inherit;
+      }
+      .go {
+        justify-self: start;
+        padding: 8px 16px;
+        border: 0;
+        border-radius: 8px;
+        background: #0b63d6; /* fixed, so white text keeps its contrast in dark mode */
+        color: #fff;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .done {
+        min-height: 1.6em;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      @media (max-width: 560px) {
+        .app {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html"><img src="media/icon.png" alt="" width="28" height="28" />Reframe</a>
+      <nav aria-label="Site">
+        <a href="index.html">Home</a><a href="help.html">Help</a
+        ><a href="practice.html" aria-current="page">Practice page</a><a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+    <main id="main">
+      <h1>Practice page</h1>
+      <p class="note">
+        Click the extension icon (or press <kbd>Ctrl+Shift+Y</kbd>) and press Record. Then pick a plan, fill in the form
+        and press Create. Stop recording with the icon. Each click becomes a zoom in the editor.
+      </p>
+      <div class="app card">
+        <div class="side" role="group" aria-label="Plan">
+          <button type="button" aria-pressed="true">Starter</button>
+          <button type="button" aria-pressed="false">Team</button>
+          <button type="button" aria-pressed="false">Studio</button>
+        </div>
+        <form>
+          <label>Project name <input name="name" value="Launch video" /></label>
+          <label>Due date <input name="due" type="date" /></label>
+          <label
+            >Owner
+            <select name="owner">
+              <option>Me</option>
+              <option>Design</option>
+              <option>Marketing</option>
+            </select>
+          </label>
+          <button class="go" type="submit">Create</button>
+          <p class="done" role="status"></p>
+        </form>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <span>© 2026 Reframe</span>
+      <nav aria-label="Footer">
+        <a href="help.html">Help</a><a href="privacy.html">Privacy</a><a href="practice.html">Practice page</a
+        ><a href="mailto:info@koderskube.com">Contact</a>
+      </nav>
+    </footer>
+    <script>
+      document
+        .querySelectorAll('.side button')
+        .forEach((b) =>
+          b.addEventListener('click', () =>
+            document.querySelectorAll('.side button').forEach((o) => o.setAttribute('aria-pressed', String(o === b))),
+          ),
+        );
+      document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.querySelector('.done').textContent = 'Project created. Now stop the recording.';
+      });
+    </script>
+  </body>
+</html>

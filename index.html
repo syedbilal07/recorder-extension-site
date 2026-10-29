@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reframe – Screen recorder with automatic zoom</title>
+    <meta
+      name="description"
+      content="Reframe is a Chrome extension that records your tab, window or screen and zooms in where you click. Edit, then export MP4, WebM or GIF. Free, and nothing is uploaded."
+    />
+    <meta property="og:title" content="Reframe – Screen recordings that zoom where you click" />
+    <meta
+      property="og:description"
+      content="Record your screen in Chrome and get smooth zooms on every click. Edit and export on your own computer."
+    />
+    <meta property="og:image" content="media/demo.jpg" />
+    <link rel="icon" href="media/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <body class="landing">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html"><img src="media/icon.png" alt="" width="28" height="28" />Reframe</a>
+      <nav aria-label="Site">
+        <a href="#features">Features</a><a href="#how">How it works</a><a href="#privacy">Privacy</a
+        ><a href="#faq">FAQ</a><a href="help.html">Help</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Chrome extension · Free</p>
+          <h1 id="hero-title">Screen recordings that <span class="grad">zoom where you click</span>.</h1>
+          <p class="lead">
+            Record a tab, a window or your whole screen. Reframe follows your clicks with smooth zooms, so your demos
+            and tutorials look edited before you edit them.
+          </p>
+          <div class="ctas">
+            <a class="btn btn-primary store-link" href="#get" data-store-link>Coming soon to the Chrome Web Store</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+          <ul class="chips" aria-label="Highlights">
+            <li>No account</li>
+            <li>Nothing uploaded</li>
+            <li>Export up to full resolution</li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <div class="frame">
+            <div class="frame-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <video
+              class="demo"
+              src="media/demo.mp4"
+              poster="media/demo.jpg"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label="Demo: clicks in a web form become smooth zooms in the exported video"
+            ></video>
+          </div>
+          <figcaption>Exported straight from Reframe: no manual editing.</figcaption>
+        </figure>
+      </section>
+
+      <section id="features" class="section" aria-labelledby="features-title">
+        <h2 id="features-title">Everything a good demo video needs</h2>
+        <p class="section-lead">The parts that usually take an hour in a video editor happen as you record.</p>
+        <ul class="features">
+          <li class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" />
+              <path d="m16 16 4 4M11 8.5v5M8.5 11h5" />
+            </svg>
+            <h3>Automatic zoom</h3>
+            <p>
+              Every click becomes a smooth zoom that frames what you clicked, then eases back out. Change any of them.
+            </p>
+          </li>
+          <li class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 4.5 18 12l-5.2 1.2L10.5 18z" />
+              <circle cx="12" cy="12" r="9" opacity=".35" />
+            </svg>
+            <h3>Clicks you can see</h3>
+            <p>
+              Click ripples, a styled cursor and the shortcuts you press, shown on screen so viewers never get lost.
+            </p>
+          </li>
+          <li class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="6.5" width="12" height="11" rx="2.5" />
+              <path d="m15.5 10.5 5-3v9l-5-3" />
+            </svg>
+            <h3>Camera and mic</h3>
+            <p>
+              Add yourself in a circle or square, with a border and shadow. Drag it anywhere; it shrinks while zoomed.
+            </p>
+          </li>
+          <li class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="6.5" cy="7" r="2.5" />
+              <circle cx="6.5" cy="17" r="2.5" />
+              <path d="M8.5 8.5 19 17M8.5 15.5 19 7" />
+            </svg>
+            <h3>A real editor</h3>
+            <p>Cut mistakes, speed up the boring parts, copy and paste clips, and undo anything.</p>
+          </li>
+          <li class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="4.5" width="17" height="15" rx="3" />
+              <path d="M8 4.5v15M3.5 9.5H8M3.5 14.5H8" />
+            </svg>
+            <h3>Sharp exports</h3>
+            <p>MP4, WebM or GIF, from 720p up to your screen’s full resolution, with pretty backgrounds and frames.</p>
+          </li>
+          <li class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3.5 19 6v5.5c0 4.3-3 7.6-7 9-4-1.4-7-4.7-7-9V6z" />
+              <path d="m9 12 2 2 4-4.5" />
+            </svg>
+            <h3>Private by design</h3>
+            <p>Recording, editing and exporting all happen on your computer. Nothing is uploaded, ever.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section showcase" aria-labelledby="editor-title">
+        <div class="showcase-copy">
+          <h2 id="editor-title">Polish it in seconds</h2>
+          <p>
+            The editor opens the moment you stop. Your zooms are already on the timeline: move them, change how close
+            they get, or add your own. Pick a background, round the corners, and export.
+          </p>
+          <ul class="ticks">
+            <li>Zooms, clips and speed on one timeline</li>
+            <li>Backgrounds, padding, shadow and aspect ratios for every platform</li>
+            <li>Keyboard shortcuts for everything</li>
+          </ul>
+        </div>
+        <img
+          class="shot"
+          src="media/editor.jpg"
+          width="1280"
+          height="800"
+          loading="lazy"
+          alt="The Reframe editor: a preview of the recording with an automatic zoom selected on the timeline"
+        />
+      </section>
+
+      <section id="how" class="section" aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <ol class="steps">
+          <li>
+            <h3>Record</h3>
+            <p>
+              Click the Reframe icon (or press <kbd>Ctrl+Shift+Y</kbd>), choose a tab, window or screen, and press
+              Record.
+            </p>
+          </li>
+          <li>
+            <h3>Do your thing</h3>
+            <p>Click, type and explain as usual. Pause any time with <kbd>Ctrl+Shift+U</kbd>.</p>
+          </li>
+          <li>
+            <h3>Export</h3>
+            <p>Stop, check the zooms in the editor, and export a video ready to share.</p>
+          </li>
+        </ol>
+        <p class="try">Want to try it on a safe page? Use the <a href="practice.html">practice page</a>.</p>
+      </section>
+
+      <section id="privacy" class="section privacy" aria-labelledby="privacy-title">
+        <div>
+          <h2 id="privacy-title">Your recordings never leave your computer</h2>
+          <p>
+            Most screen recorders upload your videos to their servers. Reframe doesn’t have servers for your videos.
+            Everything is stored in your browser on your own computer, and you choose where to save the final file.
+          </p>
+        </div>
+        <ul class="ticks">
+          <li>No account or sign-in</li>
+          <li>No analytics or tracking</li>
+          <li>Keystrokes aren’t logged; only shortcuts are noted, to show them on screen</li>
+          <li>Read the <a href="privacy.html">privacy policy</a></li>
+        </ul>
+      </section>
+
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Is Reframe free?</summary>
+            <p>Yes. Recording, editing and exporting are free, with no account and no time limit on recordings.</p>
+          </details>
+          <details>
+            <summary>Does it upload my videos?</summary>
+            <p>
+              No. Recordings, edits and exports stay on your computer, and Reframe sends nothing anywhere. It only goes
+              online when you open one of its help pages.
+            </p>
+          </details>
+          <details>
+            <summary>Which browsers and systems does it work on?</summary>
+            <p>
+              Google Chrome 116 or later on Windows, macOS, Linux and ChromeOS. Other Chromium browsers such as Edge and
+              Brave can install Chrome extensions too.
+            </p>
+          </details>
+          <details>
+            <summary>Do zooms work when I record a window or my whole screen?</summary>
+            <p>
+              Automatic zooms come from your clicks, which Reframe can see in browser tabs. For windows and screens you
+              add zooms yourself in the editor with one click.
+            </p>
+          </details>
+          <details>
+            <summary>Will my videos look sharp?</summary>
+            <p>
+              Yes. Reframe records your screen’s real pixels, even with display scaling on or a Retina screen, and can
+              export at full resolution.
+            </p>
+          </details>
+          <details>
+            <summary>Where are my recordings saved?</summary>
+            <p>
+              Inside Chrome on your computer, listed under Recordings in the editor. When you export, you choose where
+              to save the video file.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section id="get" class="section final" aria-labelledby="get-title">
+        <img src="media/icon.png" alt="" width="64" height="64" />
+        <h2 id="get-title">Make your next demo the easy way</h2>
+        <p>Free on the Chrome Web Store. Installs in seconds.</p>
+        <a class="btn btn-primary store-link" href="#get" data-store-link>Coming soon to the Chrome Web Store</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Reframe</span>
+      <nav aria-label="Footer">
+        <a href="help.html">Help</a><a href="privacy.html">Privacy</a><a href="practice.html">Practice page</a
+        ><a href="mailto:info@koderskube.com">Contact</a>
+      </nav>
+    </footer>
+    <script src="site.js"></script>
+  </body>
+</html>

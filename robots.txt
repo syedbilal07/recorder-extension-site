@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://syedbilal07.github.io/recorder-extension-site/sitemap-index.xml
+Sitemap: https://reframe.koderskube.com/sitemap-index.xml
